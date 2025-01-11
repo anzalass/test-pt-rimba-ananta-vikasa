@@ -53,7 +53,6 @@ Fitur tambahan yang diimplementasikan:
 - **PostgreSQL**: Database untuk menyimpan data pengguna
 - **Jest**: Untuk pengujian
 - **dotenv**: Untuk pengelolaan variabel lingkungan
-- **winston**: Untuk logging
 
 ## Instalasi
 

@@ -81,10 +81,10 @@ Fitur tambahan yang diimplementasikan:
    ```
 
 5. **Jalankan Migrate**
-   - Pastikan Sebelum menjalankan Migrate dan seed Database Postgres kalian telah terinstal uuid-ossp, jika belum silahkan isnstall terlebih dahulu 
-      ```bash
-      npm run migrate
-      ```
+   - Pastikan Sebelum menjalankan Migrate dan seed Database Postgres kalian telah terinstal uuid-ossp, jika belum silahkan install terlebih dahulu 
+   ```bash
+   npm run migrate
+   ```
       
 7. **Jalankan Seed**
       ```bash

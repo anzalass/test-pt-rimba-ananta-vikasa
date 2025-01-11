@@ -1,6 +1,5 @@
 const { body, param, validationResult } = require("express-validator");
 
-// Validasi untuk create user
 const createUserValidator = [
   body("name")
     .isString()
@@ -14,19 +13,13 @@ const createUserValidator = [
     .notEmpty()
     .withMessage("Email is required"),
 
-  body("age")
-    .isInt({ min: 18 })
-    .withMessage("Age should be a number and at least 18")
-    .notEmpty()
-    .withMessage("Age is required"),
+  body("age").notEmpty().withMessage("Age is required"),
 ];
 
-// Validasi untuk get user by ID
 const getUserByIDValidator = [
   param("id").isUUID().withMessage("Invalid user ID"),
 ];
 
-// Validasi untuk update user
 const updateUserValidator = [
   param("id").isUUID().withMessage("Invalid user ID"),
   body("name").optional().isString().withMessage("Name should be a string"),
@@ -37,12 +30,10 @@ const updateUserValidator = [
     .withMessage("Age should be a number and at least 18"),
 ];
 
-// Validasi untuk delete user
 const deleteUserValidator = [
   param("id").isUUID().withMessage("Invalid user ID"),
 ];
 
-// Middleware untuk mengecek error validasi
 const validate = (req, res, next) => {
   const errors = validationResult(req);
   if (!errors.isEmpty()) {

@@ -33,6 +33,7 @@ Fitur tambahan yang diimplementasikan:
    - `POST /users`: Menambahkan pengguna baru
    - `PUT /users/:id`: Memperbarui data pengguna berdasarkan ID
    - `DELETE /users/:id`: Menghapus pengguna berdasarkan ID
+   - `/swagger` : Swagger Documentation
 
 3. **Validasi Input**:
 
@@ -52,7 +53,6 @@ Fitur tambahan yang diimplementasikan:
 - **PostgreSQL**: Database untuk menyimpan data pengguna
 - **Jest**: Untuk pengujian
 - **dotenv**: Untuk pengelolaan variabel lingkungan
-- **winston**: Untuk logging
 
 ## Instalasi
 
@@ -64,18 +64,31 @@ Fitur tambahan yang diimplementasikan:
 
 2. **Sesuaikan konfigurasi**:
 
-   - Salin file `.env.example` menjadi `.env` dan sesuaikan variabel lingkungan sesuai dengan kebutuhan Anda. Pastikan Anda sudah mengatur database connection string, serta parameter lainnya seperti port aplikasi dan secret key.
+   - Salin file `.env.example` menjadi `.env` dan sesuaikan value nya dengan milik anda.
 
    ```bash
    cp .env.example .env
-
    ```
-
-3. **Jalankan**
+   
+3. **Instalasi Depedensy**
    ```bash
-   npm start
+   npm install
    ```
 
-###### Untuk Pengujian
+4. **Jalankan Migrate**
+   - Pastikan Sebelum menjalankan Migrate dan seed Database Postgres kalian telah terinstal extension uuid-ossp, jika belum silahkan install terlebih dahulu 
+   ```bash
+   npm run migrate
+   ```
+      
+7. **Jalankan Seed**
+      ```bash
+      npm run seed
+      ```
+4. **Jalankan**
+      ```bash
+      npm start
+         ```
+#### Untuk Pengujian
 
     npm test

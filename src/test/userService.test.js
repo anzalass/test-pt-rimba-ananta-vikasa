@@ -10,7 +10,6 @@ const { client } = require("../config/db");
 jest.mock("../config/db");
 
 describe("User Service", () => {
-  // Test for createUser
   describe("createUser", () => {
     it("should create a user and return the user object", async () => {
       const userData = { name: "John", email: "john@example.com", age: 30 };
@@ -40,7 +39,6 @@ describe("User Service", () => {
     });
   });
 
-  // Test for getUserByID
   describe("getUserByID", () => {
     it("should return the user if found", async () => {
       const userID = "some-uuid";
@@ -75,7 +73,6 @@ describe("User Service", () => {
     });
   });
 
-  // Test for getAllUsers
   describe("getAllUsers", () => {
     it("should return all users", async () => {
       const mockUsers = [
@@ -104,7 +101,6 @@ describe("User Service", () => {
     });
   });
 
-  // Test for updateUser
   describe("updateUser", () => {
     it("should update the user and return the updated user", async () => {
       const userID = "some-uuid";
@@ -139,7 +135,6 @@ describe("User Service", () => {
     });
   });
 
-  // Test for deleteUser
   describe("deleteUser", () => {
     it("should delete the user and return the deleted user", async () => {
       const userID = "some-uuid";

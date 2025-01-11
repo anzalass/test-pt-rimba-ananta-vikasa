@@ -13,7 +13,7 @@ const connectDB = async () => {
   try {
     await client.connect();
   } catch (error) {
-    console.log("Database error");
+    throw new Error("Error Connecting Postgres", error);
   }
 };
 

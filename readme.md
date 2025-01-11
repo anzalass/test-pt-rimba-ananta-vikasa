@@ -64,7 +64,7 @@ Fitur tambahan yang diimplementasikan:
 
 2. **Sesuaikan konfigurasi**:
 
-   - Salin file `.env.example` menjadi `.env` dan sesuaikan variabel lingkungan sesuai dengan kebutuhan Anda. Pastikan Anda sudah mengatur database connection string, serta parameter lainnya seperti port aplikasi.
+   - Salin file `.env.example` menjadi `.env` dan sesuaikan value nya dengan milik anda.
 
    ```bash
    cp .env.example .env

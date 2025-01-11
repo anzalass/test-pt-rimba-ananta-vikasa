@@ -7,6 +7,8 @@ const swaggerJsdoc = require("swagger-jsdoc");
 const swaggerUi = require("swagger-ui-express");
 const { connectDB } = require("./config/db");
 const knex = require("knex")(require("./knexfile").development);
+const userRoutes = require("./routes/userRouter");
+const swaggerDocument = require("./swagger.json"); // Mengimpor file JSON Swagger
 
 dotenv.config();
 
@@ -23,20 +25,22 @@ const options = {
       description: "API documentation for your application",
     },
   },
-  apis: ["./routes/*.js"],
+  apis: ["./controller/userController.js"],
 };
-const swaggerSpec = swaggerJsdoc(options);
-app.use("/api-docs", swaggerUi.serve, swaggerUi.setup(swaggerSpec));
+app.use("/api-docs", swaggerUi.serve, swaggerUi.setup(swaggerDocument));
 
-app.use(morgan("dev")); // Log setiap request
-app.use(cors()); // Izinkan CORS
-app.use(bodyParser.json()); // Parsing JSON di request body
+app.use(morgan("dev"));
+app.use(cors());
+app.use(bodyParser.json());
 
-// Contoh route
 app.get("/", (req, res) => {
   res.send("Test PT Rimba");
 });
 
+app.use("/api/v1", userRoutes);
+
 app.listen(port, () => {
   console.log(`Server running on http://localhost:${port}`);
 });
+
+module.exports = app;

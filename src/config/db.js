@@ -9,14 +9,11 @@ const client = new Client({
 });
 
 const connectDB = async () => {
-  client
-    .connect()
-    .then(() => {
-      console.log("Connected to PostgreSQL");
-    })
-    .catch((err) => {
-      console.error("Connection error", err.stack);
-    });
+  try {
+    await client.connect();
+  } catch (error) {
+    console.log("Database error");
+  }
 };
 
 module.exports = { client, connectDB };

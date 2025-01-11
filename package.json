@@ -6,8 +6,8 @@
     "start": "node ./src/index.js",
     "test": "jest",
     "dev": "nodemon ./src/index.js",
-    "migrate": "cross-env NODE_ENV=development knex migrate:latest --knexfile src/knexfile.js",
-    "seed": "cross-env NODE_ENV=development knex seed:run --knexfile src/knexfile.js"
+    "migrate": "knex migrate:latest --knexfile src/knexfile.js",
+    "seed": "knex seed:run --knexfile src/knexfile.js"
   },
   "author": "Muhamad Gempar Anzalas",
   "license": "ISC",

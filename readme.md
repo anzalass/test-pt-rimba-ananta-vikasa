@@ -68,14 +68,28 @@ Fitur tambahan yang diimplementasikan:
 
    ```bash
    cp .env.example .env
-
    ```
-
-3. **Jalankan**
+   
+3. **Instalasi Depedensy**
+   ```bash
+   npm install
+   ```
+   
+4. **Jalankan**
    ```bash
    npm start
    ```
 
+5. **Jalankan Migrate**
+   - Pastikan Sebelum menjalankan Migrate dan seed Database Postgres kalian telah terinstal uuid-ossp, jika belum silahkan install terlebih dahulu 
+   ```bash
+   npm run migrate
+   ```
+      
+7. **Jalankan Seed**
+      ```bash
+      npm run seed
+      ```
 ###### Untuk Pengujian
 
     npm test

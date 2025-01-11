@@ -33,6 +33,7 @@ Fitur tambahan yang diimplementasikan:
    - `POST /users`: Menambahkan pengguna baru
    - `PUT /users/:id`: Memperbarui data pengguna berdasarkan ID
    - `DELETE /users/:id`: Menghapus pengguna berdasarkan ID
+   - `/api-docs/` : Swagger Documentation
 
 3. **Validasi Input**:
 
@@ -52,7 +53,6 @@ Fitur tambahan yang diimplementasikan:
 - **PostgreSQL**: Database untuk menyimpan data pengguna
 - **Jest**: Untuk pengujian
 - **dotenv**: Untuk pengelolaan variabel lingkungan
-- **winston**: Untuk logging
 
 ## Instalasi
 

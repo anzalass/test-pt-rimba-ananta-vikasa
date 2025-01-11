@@ -13,11 +13,7 @@ const createUserValidator = [
     .notEmpty()
     .withMessage("Email is required"),
 
-  body("age")
-    .isInt({ min: 18 })
-    .withMessage("Age should be a number and at least 18")
-    .notEmpty()
-    .withMessage("Age is required"),
+  body("age").notEmpty().withMessage("Age is required"),
 ];
 
 const getUserByIDValidator = [

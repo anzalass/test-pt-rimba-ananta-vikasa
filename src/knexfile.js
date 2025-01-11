@@ -18,5 +18,3 @@ module.exports = {
     },
   },
 };
-
-console.log(process.env.DB_PASSWORD);

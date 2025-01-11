@@ -31,6 +31,7 @@ const getUserByID = async (id) => {
 const getAllUsers = async () => {
   try {
     const query = "SELECT * FROM users";
+
     const result = await client.query(query);
     return result.rows;
   } catch (error) {
@@ -41,12 +42,14 @@ const getAllUsers = async () => {
 const updateUser = async (id, updatedUser) => {
   try {
     const { name, email, age } = updatedUser;
+
     const query = `
       UPDATE users
       SET name=$1, email=$2, age=$3
       WHERE id=$4
       RETURNING *;
     `;
+
     const values = [name, email, age, id];
     const result = await client.query(query, values);
     return result.rows[0];

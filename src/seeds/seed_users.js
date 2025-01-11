@@ -4,7 +4,7 @@
  */
 exports.seed = function (knex) {
   return knex("users")
-    .del() // Hapus data lama
+    .del()
     .then(function () {
       return knex("users").insert([
         { name: "Alice", email: "alice@example.com", age: 25 },

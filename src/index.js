@@ -8,7 +8,7 @@ const swaggerUi = require("swagger-ui-express");
 const { connectDB } = require("./config/db");
 const knex = require("knex")(require("./knexfile").development);
 const userRoutes = require("./routes/userRouter");
-const swaggerDocument = require("./swagger.json"); // Mengimpor file JSON Swagger
+const swaggerDocument = require("./swagger.json");
 
 dotenv.config();
 

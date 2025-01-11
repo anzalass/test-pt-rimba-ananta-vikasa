@@ -5,9 +5,9 @@ module.exports = {
     client: "pg",
     connection: {
       host: process.env.DB_HOST,
-      user: process.env.DB_USER, // Ganti dengan username PostgreSQL kamu
-      password: process.env.DB_PASSWORD, // Ganti dengan password PostgreSQL kamu
-      database: process.env.DB_NAME, // Ganti dengan nama database kamu
+      user: process.env.DB_USER,
+      password: process.env.DB_PASSWORD,
+      database: process.env.DB_NAME,
     },
     migrations: {
       directory: "./migrations",

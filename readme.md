@@ -33,7 +33,7 @@ Fitur tambahan yang diimplementasikan:
    - `POST /users`: Menambahkan pengguna baru
    - `PUT /users/:id`: Memperbarui data pengguna berdasarkan ID
    - `DELETE /users/:id`: Menghapus pengguna berdasarkan ID
-   - `/api-docs/` : Swagger Documentation
+   - `/swagger` : Swagger Documentation
 
 3. **Validasi Input**:
 
@@ -74,14 +74,9 @@ Fitur tambahan yang diimplementasikan:
    ```bash
    npm install
    ```
-   
-4. **Jalankan**
-   ```bash
-   npm start
-   ```
 
-5. **Jalankan Migrate**
-   - Pastikan Sebelum menjalankan Migrate dan seed Database Postgres kalian telah terinstal uuid-ossp, jika belum silahkan install terlebih dahulu 
+4. **Jalankan Migrate**
+   - Pastikan Sebelum menjalankan Migrate dan seed Database Postgres kalian telah terinstal extension uuid-ossp, jika belum silahkan install terlebih dahulu 
    ```bash
    npm run migrate
    ```
@@ -90,6 +85,10 @@ Fitur tambahan yang diimplementasikan:
       ```bash
       npm run seed
       ```
-###### Untuk Pengujian
+4. **Jalankan**
+      ```bash
+      npm start
+         ```
+#### Untuk Pengujian
 
     npm test

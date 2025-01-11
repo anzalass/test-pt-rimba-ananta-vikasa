@@ -86,9 +86,9 @@ Fitur tambahan yang diimplementasikan:
       npm run seed
       ```
 4. **Jalankan**
-      ```bash
-      npm start
-         ```
+         ```bash
+         npm start
+            ```
 #### Untuk Pengujian
 
     npm test

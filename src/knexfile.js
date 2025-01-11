@@ -1,11 +1,13 @@
+require("dotenv").config({ path: "../.env" });
+
 module.exports = {
   development: {
     client: "pg",
     connection: {
-      host: "localhost",
-      user: "postgres", // Ganti dengan username PostgreSQL kamu
-      password: "123", // Ganti dengan password PostgreSQL kamu
-      database: "pt_rimba", // Ganti dengan nama database kamu
+      host: process.env.DB_HOST,
+      user: process.env.DB_USER, // Ganti dengan username PostgreSQL kamu
+      password: process.env.DB_PASSWORD, // Ganti dengan password PostgreSQL kamu
+      database: process.env.DB_NAME, // Ganti dengan nama database kamu
     },
     migrations: {
       directory: "./migrations",
@@ -16,3 +18,5 @@ module.exports = {
     },
   },
 };
+
+console.log(process.env.DB_PASSWORD);

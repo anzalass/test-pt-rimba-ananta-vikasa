@@ -78,6 +78,4 @@ Fitur tambahan yang diimplementasikan:
 
 ###### Untuk Pengujian
 
-    ```bash
     npm test
-    ```

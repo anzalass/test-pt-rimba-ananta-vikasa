@@ -1,11 +1,12 @@
-const { Client, Connection } = require("pg");
+const { Client } = require("pg");
+require("dotenv").config();
 
 const client = new Client({
-  host: "localhost", // Alamat host PostgreSQL (misalnya 'localhost')
-  port: 5432, // Port default PostgreSQL
-  user: "postgres", // Ganti dengan username PostgreSQL kamu
-  password: "123", // Ganti dengan password PostgreSQL kamu
-  database: "pt_rimba", // Ganti dengan nama database kamu
+  host: process.env.DB_HOST,
+  port: process.env.DB_PORT,
+  user: process.env.DB_USER,
+  password: process.env.DB_PASSWORD,
+  database: process.env.DB_NAME,
 });
 
 const connectDB = async () => {

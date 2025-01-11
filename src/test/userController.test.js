@@ -42,7 +42,6 @@ describe("User Controller", () => {
     ];
 
     userService.getAllUsers.mockResolvedValue(users);
-
     const response = await request(app).get("/users");
     expect(response.status).toBe(200);
     expect(response.body).toEqual(users);

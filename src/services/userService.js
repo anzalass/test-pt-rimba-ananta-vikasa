@@ -8,6 +8,7 @@ const createUser = async (user) => {
     VALUES (uuid_generate_v4(), $1, $2, $3)
     RETURNING *;
   `;
+
     const values = [name, email, age];
     const result = await client.query(query, values);
     return result.rows[0];
@@ -19,6 +20,7 @@ const createUser = async (user) => {
 const getUserByID = async (id) => {
   try {
     const query = "SELECT * FROM users WHERE id = $1";
+
     const result = await client.query(query, [id]);
     return result.rows[0];
   } catch (error) {
